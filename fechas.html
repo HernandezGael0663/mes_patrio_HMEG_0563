@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉXICO - Fechas Importantes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #0d5231; 
+            color: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .mapa {
+            position: absolute;
+            top: 0.1px;
+            left: 20px;
+            width: 280px; 
+            height: auto;
+            z-index: 5;
+        }
+
+        .maracas {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 200px; 
+            height: auto;
+            z-index: 10;
+        }
+
+        .fatibb {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px; 
+            height: auto;
+            z-index: 10;
+        }
+
+        .contenedor-titulo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Ampliado para que los cuadros tengan más espacio y queden centrados */
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .titulo {
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .titulo-verde { color: #008751; }
+        .titulo-blanco { color: #ffffff; }
+        .titulo-rojo { color: red; }
+
+        .subtitulo {
+            color: #ffffff;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            margin-top: -10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.2s;
+            text-align: center;
+        }
+
+        .nav-btn.active {
+            font-size: 1.2rem;
+            padding: 10px 40px;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            background-color: #f0f0f0;
+        }
+
+        .contenedor-fechas {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 15px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .fecha {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 30px 15px; 
+            flex: 1;
+            min-height: 240px; 
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .fecha-titulo {
+            color: #008751;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .fecha-descripcion {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #000000;
+            line-height: 1.4;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding: 12px 35px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: auto;
+            z-index: 2;
+        }
+
+        footer p {
+            margin: 2px 0;
+        }
+
+        /* Adaptación pantallas pequeñas */
+        @media (max-width: 900px) {
+            .contenedor-fechas {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .fecha {
+                min-width: 180px;
+            }
+            .titulo {
+                font-size: 3.5rem;
+            }
+            .subtitulo {
+                font-size: 1.2rem;
+            }
+            .mapa, .maracas {
+                width: 100px;
+            }
+            .fatibb {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="mapa.png" alt="Mapa México" class="mapa">
+    <img src="maracas.png" alt="Maracas" class="maracas">
+
+    <div class="contenedor-titulo">
+        <header>
+            <h1 class="titulo">
+               <span class="titulo-verde">MÉ</span><span class="titulo-blanco">XI</span><span class="titulo-rojo">CO</span>
+            </h1>
+            <div class="subtitulo">MES PATRIO</div>
+        </header>
+
+        <nav>
+            <a href="index.html" class="nav-btn">INICIO</a>
+            <a href="fechas.html" class="nav-btn active">FECHAS IMPORTANTES</a>
+            <a href="personajes.html" class="nav-btn">PERSONAJES ILUSTRES</a>
+            <a href="mitos.html" class="nav-btn">DATOS CURIOSOS Y MITOS</a>
+        </nav>
+
+        <main class="contenedor-fechas">
+            <div class="fecha">
+                <h2 class="fecha-titulo">13 de septiembre</h2>
+                <p class="fecha-descripcion">Aniversario del sacrificio de los Niños Héroes de Chapultepec en 1847.</p>
+            </div>
+
+            <div class="fecha">
+                <h2 class="fecha-titulo">15 de septiembre</h2>
+                <p class="fecha-descripcion">Conmemoración del Grito de Independencia.</p>
+            </div>
+
+            <div class="fecha">
+                <h2 class="fecha-titulo">16 de septiembre</h2>
+                <p class="fecha-descripcion">Aniversario del inicio de la Independencia de México en 1810.</p>
+            </div>
+
+            <div class="fecha">
+                <h2 class="fecha-titulo">27 de septiembre</h2>
+                <p class="fecha-descripcion">Aniversario de la Consumación de la Independencia en 1821.</p>
+            </div>
+
+            <div class="fecha">
+                <h2 class="fecha-titulo">30 de septiembre</h2>
+                <p class="fecha-descripcion">José María Morelos y Pavón en 1765.</p>
+            </div>
+        </main>
+    </div>
+
+    <img src="fatibb.png" alt="fatima" class="fatibb">
+
+    <footer>
+        <p>HERNÁNDEZ MIJARES EDWIN GAEL 5ºI</p>
+        <p>24308051280563</p>
+    </footer>
+
+</body>
+</html>

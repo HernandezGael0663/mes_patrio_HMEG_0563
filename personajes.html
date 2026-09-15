@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉXICO - Personajes Ilustres</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #0d5231; 
+            color: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .mapa {
+            position: absolute;
+            top: 0.1px;
+            left: 20px;
+            width: 280px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .maracas {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .fatibb {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .contenedor_titulo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .titulo {
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .titulo-verde { color: #008751; }
+        .titulo-blanco { color: #ffffff; }
+        .titulo-rojo { color: red; }
+
+        .subtitulo {
+            color: #ffffff;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            margin-top: -10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.2s;
+            text-align: center;
+        }
+
+        .nav-btn.active {
+            font-size: 1.2rem;
+            padding: 10px 40px;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            background-color: #f0f0f0;
+        }
+
+        .personajes {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            width: 100%;
+            margin-top: 25px; 
+            margin-bottom: 30px;
+        }
+
+        .personaje_mexico {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            max-width: 220px;
+        }
+
+        .imagen-personaje {
+            height: 140px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 10px; 
+            z-index: 2;
+        }
+
+        .personaje-box {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 15px; 
+            text-align: center;
+            width: 100%;
+            min-height: 230px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .nombre-personaje {
+            color: green;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .descripcion-personaje {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding: 12px 35px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: auto;
+            z-index: 2;
+        }
+
+        footer p {
+            margin: 2px 0;
+        }
+
+        /* ADAPTACIÓN PARA PANTALLAS PEQUEÑAS / CELULARES */
+        @media (max-width: 900px) {
+            .personajes {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .personaje_mexico {
+                min-width: 180px;
+            }
+            .titulo {
+                font-size: 3.5rem;
+            }
+            .subtitulo {
+                font-size: 1.2rem;
+            }
+            .mapa, .maracas {
+                width: 100px;
+            }
+            .fatibb {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="mapa.png" alt="Mapa México" class="mapa">
+    <img src="maracas.png" alt="Maracas" class="maracas">
+
+    <div class="contenedor_titulo">
+        <header>
+            <h1 class="titulo">
+               <span class="titulo-verde">MÉ</span><span class="titulo-blanco">XI</span><span class="titulo-rojo">CO</span>
+            </h1>
+            <div class="subtitulo">MES PATRIO</div>
+        </header>
+
+        <nav>
+            <a href="index.html" class="nav-btn">INICIO</a>
+            <a href="fechas.html" class="nav-btn">FECHAS IMPORTANTES</a>
+            <a href="personajes.html" class="nav-btn active">PERSONAJES ILUSTRES</a>
+            <a href="mitos.html" class="nav-btn">DATOS CURIOSOS Y MITOS</a>
+        </nav>
+
+        <div class="personajes">
+
+            <div class="personaje_mexico">
+                <img src="hidalgo.jpg" alt="Miguel Hidalgo y Costilla" class="imagen-personaje">
+                <div class="personaje-box">
+                    <h2 class="nombre-personaje">Miguel Hidalgo y Costilla:</h2>
+                    <p class="descripcion-personaje">
+                        Considerado el Padre de la Patria; inició el movimiento independentista.
+                    </p>
+                </div>
+            </div>
+
+            <div class="personaje_mexico">
+                <img src="morelos.jpg" alt="José María Morelos y Pavón" class="imagen-personaje">
+                <div class="personaje-box">
+                    <h2 class="nombre-personaje">José María Morelos y Pavón:</h2>
+                    <p class="descripcion-personaje">
+                        Estratega militar y libertador que definió los ideales políticos de la nación en los Sentimientos de la Nación.
+                    </p>
+                </div>
+            </div>
+
+            <div class="personaje_mexico">
+                <img src="josefa.jpg" alt="Josefa Ortiz de Domínguez" class="imagen-personaje">
+                <div class="personaje-box">
+                    <h2 class="nombre-personaje">Josefa Ortiz de Domínguez</h2>
+                    <p class="descripcion-personaje">
+                        La Corregidora; figura clave de la Conspiración de Querétaro que avisó a los insurgentes para iniciar la lucha.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PERSONAJE 4: VICENTE GUERRERO -->
+            <div class="personaje_mexico">
+                <img src="vicente.jpg" alt="Vicente Guerrero" class="imagen-personaje">
+                <div class="personaje-box">
+                    <h2 class="nombre-personaje">Vicente Guerrero</h2>
+                    <p class="descripcion-personaje">
+                        Líder insurgente de la resistencia que pactó la paz para consumar la independencia con la frase: "La patria es primero".
+                    </p>
+                </div>
+            </div>
+
+            <div class="personaje_mexico">
+                <img src="iturbide.jpg" alt="Agustín de Iturbide" class="imagen-personaje">
+                <div class="personaje-box">
+                    <h2 class="nombre-personaje">Agustín de Iturbide</h2>
+                    <p class="descripcion-personaje">
+                        Comandante del Ejército Realista que negoció con los insurgentes el Plan de Iguala, formó el Ejército Trigarante y consumó la Independencia en 1821, convirtiéndose después en el primer Emperador de México.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="fatibb.png" alt="fatima" class="fatibb">
+    <footer>
+        <p>HERNÁNDEZ MIJARES EDWIN GAEL 5ºI</p>
+        <p>24308051280563</p>
+    </footer>
+
+</body>
+</html>
