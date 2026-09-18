@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Define la codificación de caracteres para aceptar acentos y la letra ñ -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta la vista para que la página se adapte al ancho de la pantalla de celulares y computadoras -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>MÉXICO - Mes Patrio</title>
     <style>
+        /* Elimina márgenes y espacios por defecto de todos los elementos, Tipo de letra   */
         * {
             margin: 0;
             padding: 0;
@@ -13,6 +16,7 @@
         }
 
         body {
+            /* ESTRUCTURA BASE Y FONDO: Define el color de fondo verde, centra todo verticalmente y distribuye los elementos */
             background-color: #0d5231; 
             color: #000;
             min-height: 100vh;
@@ -26,12 +30,13 @@
         }
 
         .mapa {
+            /* IMÁGENES: Las ubica en esquinas fijas de la pantalla fijando su tamaño y su posicion */
             position: absolute;
             top: 0.1px;
             left: 20px;
             width: 280px; 
             height: auto;
-            z-index: 5;
+            z-index: 5; /* Imágen flotante */
         }
 
         .maracas {
@@ -51,7 +56,7 @@
             height: auto;
             z-index: 10;
         }
-
+        /* CONTENEDOR TITULO: Alinea y limita el ancho máximo del contenido al centro de la pantalla */
         .contenedor-titulo {
             display: flex;
             flex-direction: column;
@@ -65,7 +70,7 @@
             text-align: center;
             margin-bottom: 25px;
         }
-
+         /* ENCABEZADO "MÉXICO": Tamaño del título principal */
         .titulo {
             font-size: 5rem;
             font-weight: bold;
@@ -74,18 +79,19 @@
             justify-content: center;
             align-items: center;
         }
-
+        /* Asignación de colores a cada par de letras */
         .titulo-verde { color: #008751; }
         .titulo-blanco { color: #ffffff; }
         .titulo-rojo { color: red; }
 
+        /* Estilo, colo, tipo de letra subtitulo */
         .subtitulo {
             color: #ffffff;
             font-size: 1.8rem;
             letter-spacing: 4px;
             margin-top: -10px;
         }
-
+       /* BARRA DE NAVEGACIÓN Y BOTONES: Acomoda los botones en fila con forma de cápsula y les da efectos al pasar el cursor */
         nav {
             display: flex;
             justify-content: center;
@@ -94,7 +100,7 @@
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
-
+         
         .nav-btn {
             background-color: #ffffff;
             color: #000000;
@@ -109,16 +115,19 @@
             text-align: center;
         }
 
+        /* Destaca el botón de la página donde estás parado actualmente */
         .nav-btn.active {
             font-size: 1.2rem;
             padding: 10px 40px;
         }
 
+        /* Eleva levemente el botón 2 píxeles hacia arriba */
         .nav-btn:hover {
             transform: translateY(-2px);
             background-color: #f0f0f0;
         }
 
+        /* CONTENEDOR BLANCO CENTRAL Y TEXTO: Oculta la sombra, redondea los bordes y justifica el párrafo de bienvenida */
         .contenedor-principal {
             background-color: #ffffff;
             border-radius: 20px;
@@ -138,6 +147,7 @@
             color: #000;
         }
 
+        /* PIE DE PÁGINA: Cuadro blanco fijo abajo que muestra tus datos personales */
         footer {
             background-color: #ffffff;
             padding: 12px 35px;
@@ -181,17 +191,22 @@
 </head>
 <body>
 
+    <!-- IMÁGENES MAPA/MARACAS ESQUINAS SUPERIORES -->
     <img src="mapa.png" alt="Mapa México" class="mapa">
     <img src="maracas.png" alt="Maracas" class="maracas">
 
+    <!-- BLOQUE ESTRUCTURAL CENTRAL -->
     <div class="contenedor-titulo">
+        
+        <!-- Título principal "MÉXICO" dividido por los colores -->
         <header>
             <h1 class="titulo">
-               <span class="titulo-verde ">MÉ</span><span class="titulo-blanco">XI</span><span class="titulo-rojo">CO</span>
+               <span class="titulo-verde">MÉ</span><span class="titulo-blanco">XI</span><span class="titulo-rojo">CO</span>
             </h1>
             <div class="subtitulo">MES PATRIO</div>
         </header>
 
+        <!-- Menú de enlaces entre páginas web del proyecto -->
         <nav>
             <a href="index.html" class="nav-btn active">INICIO</a>
             <a href="fechas.html" class="nav-btn">FECHAS IMPORTANTES</a>
@@ -199,6 +214,7 @@
             <a href="mitos.html" class="nav-btn">DATOS CURIOSOS Y MITOS</a>
         </nav>
 
+        <!-- Cuadro con el texto de presentación principal -->
         <main class="contenedor-principal">
             <p>
                 Septiembre es el mes con mayor carga simbólica e histórica para el pueblo mexicano. 
@@ -209,8 +225,10 @@
         </main>
     </div>
 
+    <!-- IMAGEN DECORATIVA ESQUINA INFERIOR DERECHA -->
     <img src="fatibb.png" alt="fatima" class="fatibb">
 
+    <!-- PIE DE PÁGINA CON DATOS DEL ALUMNO -->
     <footer>
         <p>HERNÁNDEZ MIJARES EDWIN GAEL 5ºI</p>
         <p>24308051280563</p>
