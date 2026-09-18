@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Define la codificación de caracteres para aceptar acentos y la letra ñ -->
     <meta charset="UTF-8">
+    <!-- Ajusta la vista para que la página se adapte al ancho de la pantalla de celulares y computadoras -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MÉXICO - Personajes Ilustres</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>MÉXICO - Mes Patrio</title>
+    
     <style>
+        /* CONFIGURACIÓN GLOBAL: Resetea espacios por defecto y define la fuente base de toda la página */
         * {
             margin: 0;
             padding: 0;
@@ -12,6 +17,7 @@
             font-family: 'Times New Roman', Times, serif;
         }
 
+        /* ESTRUCTURA BASE Y FONDO: Define el color de fondo verde, centra todo verticalmente y distribuye los elementos */
         body {
             background-color: #0d5231; 
             color: #000;
@@ -25,13 +31,14 @@
             overflow-x: hidden;
         }
 
+        /* IMÁGENES: Las ubica en esquinas fijas de la pantalla fijando su tamaño y posicion  */
         .mapa {
             position: absolute;
             top: 0.1px;
             left: 20px;
             width: 280px;
             height: auto;
-            z-index: 10;
+            z-index: 10; /* Imagenes flotantes */
         }
 
         .maracas {
@@ -52,6 +59,7 @@
             z-index: 10;
         }
 
+        /* CONTENEDOR TITULOL: Alinea y limita el ancho máximo del contenido al centro de la pantalla */
         .contenedor_titulo {
             display: flex;
             flex-direction: column;
@@ -66,6 +74,7 @@
             margin-bottom: 25px;
         }
 
+        /* ENCABEZADO "MÉXICO": Tamaño del título principal y asignación de colores a cada par de letras */
         .titulo {
             font-size: 5rem;
             font-weight: bold;
@@ -86,6 +95,7 @@
             margin-top: -10px;
         }
 
+        /* BARRA DE NAVEGACIÓN Y BOTONES: Acomoda los botones en fila con forma de cápsula y les da efectos al pasar el cursor */
         nav {
             display: flex;
             justify-content: center;
@@ -109,6 +119,7 @@
             text-align: center;
         }
 
+        /* Destaca el botón de la página donde estás parado actualmente */
         .nav-btn.active {
             font-size: 1.2rem;
             padding: 10px 40px;
@@ -119,6 +130,7 @@
             background-color: #f0f0f0;
         }
 
+        /* CONTENEDOR DE PERSONAJES: Distribuye las columnas de los personajes horizontalmente con espacio entre ellas */
         .personajes {
             display: flex;
             justify-content: space-between;
@@ -129,6 +141,7 @@
             margin-bottom: 30px;
         }
 
+        /* COLUMNA INDIVIDUAL DE PERSONAJE: Agrupa la imagen y la tarjeta de texto centrándolas */
         .personaje_mexico {
             display: flex;
             flex-direction: column;
@@ -137,6 +150,7 @@
             max-width: 220px;
         }
 
+        /* FOTO DE PERSONAJE: Define el tamaño y ajuste de las imágenes de los personajes */
         .imagen-personaje {
             height: 140px;
             width: auto;
@@ -145,6 +159,7 @@
             z-index: 2;
         }
 
+        /* TARJETAS BLANCAS DE PERSONAJES: Cuadro de información con fondo blanco, bordes redondeados y sombra */
         .personaje-box {
             background-color: #ffffff;
             border-radius: 20px;
@@ -158,6 +173,7 @@
             justify-content: flex-start;
         }
 
+        /* TÍTULO Y DESCRIPCIÓN DEL PERSONAJE: Color verde para los nombres y formato de texto para las biografía */
         .nombre-personaje {
             color: green;
             font-size: 1.1rem;
@@ -173,6 +189,7 @@
             line-height: 1.3;
         }
 
+        /* PIE DE PÁGINA: Cuadro blanco fijo abajo que muestra tus datos personales */
         footer {
             background-color: #ffffff;
             padding: 12px 35px;
@@ -190,7 +207,7 @@
             margin: 2px 0;
         }
 
-        /* ADAPTACIÓN PARA PANTALLAS PEQUEÑAS / CELULARES */
+        /*  Ajusta a pantallas pequeñas */
         @media (max-width: 900px) {
             .personajes {
                 flex-wrap: wrap;
@@ -216,10 +233,14 @@
 </head>
 <body>
 
+    <!-- IMÁGENES MARACAS/MAPA ESQUINAS SUPERIORES -->
     <img src="mapa.png" alt="Mapa México" class="mapa">
     <img src="maracas.png" alt="Maracas" class="maracas">
 
+    <!-- BLOQUE ESTRUCTURAL CENTRAL -->
     <div class="contenedor_titulo">
+        
+        <!-- Título principal "MÉXICO" dividido por los colores patrios -->
         <header>
             <h1 class="titulo">
                <span class="titulo-verde">MÉ</span><span class="titulo-blanco">XI</span><span class="titulo-rojo">CO</span>
@@ -227,6 +248,7 @@
             <div class="subtitulo">MES PATRIO</div>
         </header>
 
+        <!-- Menú de enlaces entre páginas web del proyecto -->
         <nav>
             <a href="index.html" class="nav-btn">INICIO</a>
             <a href="fechas.html" class="nav-btn">FECHAS IMPORTANTES</a>
@@ -234,6 +256,7 @@
             <a href="mitos.html" class="nav-btn">DATOS CURIOSOS Y MITOS</a>
         </nav>
 
+        <!-- SECCIÓN DE TARJETAS E IMÁGENES DE PERSONAJES PATRIOS -->
         <div class="personajes">
 
             <div class="personaje_mexico">
@@ -266,7 +289,6 @@
                 </div>
             </div>
 
-            <!-- PERSONAJE 4: VICENTE GUERRERO -->
             <div class="personaje_mexico">
                 <img src="vicente.jpg" alt="Vicente Guerrero" class="imagen-personaje">
                 <div class="personaje-box">
@@ -290,11 +312,15 @@
         </div>
     </div>
 
+    <!-- IMAGEN FATIMAA ESQUINA INFERIOR DERECHA -->
     <img src="fatibb.png" alt="fatima" class="fatibb">
+
+    <!-- PIE DE PÁGINA CON DATOS DEL ALUMNO -->
     <footer>
         <p>HERNÁNDEZ MIJARES EDWIN GAEL 5ºI</p>
         <p>24308051280563</p>
     </footer>
 
 </body>
+</html>
 </html>
